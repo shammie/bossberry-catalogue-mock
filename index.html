@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bossberry — Catalogue 2026–27</title>
+  <meta name="description" content="Bossberry Industries, Vasai. Airtight PET jars and unbreakable bottles. Catalogue 2026–2027." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --crimson: #9b1024;
+      --red: #c1122a;
+      --deep: #1c0609;
+      --ink: #1a1210;
+      --muted: #6b5a52;
+      --paper: #f6efe4;
+      --white: #fffcf7;
+      --gold: #e2b441;
+      --yellow: #f0c93a;
+      --leaf: #3d7a2e;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body {
+      font-family: Outfit, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      text-wrap: pretty;
+    }
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    nav {
+      position: sticky; top: 0; z-index: 20;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.85rem 6vw;
+      background: color-mix(in srgb, var(--deep) 88%, transparent);
+      backdrop-filter: blur(12px);
+      color: var(--white);
+    }
+    .wordmark {
+      font-weight: 500; letter-spacing: -0.03em; font-size: 1.15rem;
+    }
+    .wordmark span { color: var(--gold); }
+    .nav-links { display: flex; gap: 1.5rem; font-size: 0.82rem; font-weight: 500; }
+    .nav-links a { text-decoration: none; opacity: 0.82; }
+    .nav-links a:hover { opacity: 1; }
+    .enquire {
+      background: var(--white); color: var(--crimson);
+      text-decoration: none; font-size: 0.78rem; font-weight: 600;
+      padding: 0.55rem 0.9rem; border-radius: 999px;
+    }
+
+    .hero {
+      min-height: 100svh;
+      background: var(--deep) url("cover.jpg") center/cover no-repeat;
+      color: var(--white);
+      display: grid;
+      align-content: end;
+      padding: 8vh 6vw 7vh;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(20,4,6,.72) 100%);
+      pointer-events: none;
+    }
+    .hero-inner { position: relative; z-index: 1; max-width: 38rem; }
+    .kicker {
+      font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase;
+      opacity: 0.8; margin-bottom: 0.8rem;
+    }
+    h1 {
+      font-family: Fraunces, serif;
+      font-weight: 400;
+      font-size: clamp(2.8rem, 8vw, 5.4rem);
+      line-height: 0.92;
+      letter-spacing: -0.03em;
+    }
+    .hero p {
+      margin-top: 1.2rem; max-width: 28rem;
+      font-weight: 300; font-size: 1.05rem; line-height: 1.5; opacity: 0.92;
+    }
+
+    .rail {
+      display: flex; gap: 0.7rem; overflow-x: auto;
+      padding: 1.1rem 6vw;
+      background: var(--deep); color: var(--white);
+      scrollbar-width: none;
+    }
+    .rail::-webkit-scrollbar { display: none; }
+    .rail a {
+      flex: 0 0 auto; text-decoration: none;
+      border: 1px solid color-mix(in srgb, white 22%, transparent);
+      padding: 0.45rem 0.85rem; border-radius: 999px;
+      font-size: 0.78rem; white-space: nowrap;
+    }
+    .rail a:hover { background: var(--white); color: var(--deep); }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      min-height: 88vh;
+    }
+    .split figure {
+      margin: 0; background: var(--yellow);
+      display: grid; place-items: center; overflow: hidden;
+    }
+    .split figure img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center 18%;
+    }
+    .split article {
+      padding: 8vh 6vw;
+      display: flex; flex-direction: column; justify-content: center;
+      background: var(--white);
+    }
+    .split h2 {
+      font-family: Fraunces, serif;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-weight: 400; font-style: italic;
+      color: #8a4a18; line-height: 0.9;
+    }
+    .eyebrow {
+      font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 0.6rem; font-weight: 600;
+    }
+    .split ul { margin: 1.4rem 0 0; list-style: none; }
+    .split li {
+      padding: 0.55rem 0;
+      border-bottom: 1px solid #eadfd0;
+      font-size: 0.95rem;
+    }
+    .sizes { margin-top: 1.4rem; color: var(--muted); font-size: 0.88rem; line-height: 1.55; }
+
+    .bottles {
+      padding: 8vh 0 6vh;
+      background: var(--deep); color: var(--white);
+    }
+    .bottles header { padding: 0 6vw 2.5rem; max-width: 36rem; }
+    .bottles h2 {
+      font-family: Fraunces, serif; font-weight: 400;
+      font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.05;
+    }
+    .scroller {
+      display: flex; gap: 1rem; overflow-x: auto;
+      padding: 0 6vw 1rem; scroll-snap-type: x mandatory;
+      scrollbar-width: thin;
+    }
+    .card {
+      flex: 0 0 min(72vw, 320px);
+      scroll-snap-align: start;
+      background: #2a0b10;
+    }
+    .card img { aspect-ratio: 3/4; width: 100%; object-fit: cover; object-position: center 20%; }
+    .card figcaption { padding: 0.9rem 1rem 1.1rem; }
+    .card strong { display: block; font-size: 1.05rem; }
+    .card span { font-size: 0.78rem; opacity: 0.7; }
+
+    .house {
+      display: grid; grid-template-columns: 0.9fr 1.1fr; min-height: 70vh;
+    }
+    .house article { padding: 8vh 6vw; background: var(--paper); display: flex; flex-direction: column; justify-content: center; }
+    .house h2 {
+      font-family: Fraunces, serif; font-weight: 400;
+      font-size: clamp(2rem, 4.5vw, 3.2rem); line-height: 1.08;
+    }
+    .house p { margin-top: 1rem; color: var(--muted); max-width: 34rem; line-height: 1.6; }
+    .house figure img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+
+    .contact {
+      background: var(--crimson) url("contact.jpg") center/cover no-repeat;
+      color: var(--white); min-height: 72vh;
+      display: grid; align-content: end;
+      padding: 10vh 6vw 7vh; position: relative;
+    }
+    .contact::before {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(28,6,9,.15), rgba(28,6,9,.78));
+    }
+    .contact-inner { position: relative; z-index: 1; max-width: 40rem; }
+    .contact h2 {
+      font-family: Fraunces, serif; font-weight: 400;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+    }
+    .contact address {
+      font-style: normal; margin-top: 1.2rem; line-height: 1.7; font-weight: 300;
+    }
+    .contact a { color: var(--gold); }
+
+    footer {
+      padding: 1.2rem 6vw; font-size: 0.72rem; color: var(--muted);
+      background: var(--deep); color: #cbb;
+    }
+
+    @media (max-width: 860px) {
+      .nav-links { display: none; }
+      .split, .house { grid-template-columns: 1fr; }
+      .split figure, .house figure { min-height: 52vh; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wordmark">Boss<span>berry</span>™</div>
+    <div class="nav-links">
+      <a href="#olivia">Olivia</a>
+      <a href="#bottles">Bottles</a>
+      <a href="#house">House</a>
+      <a href="#contact">Vasai</a>
+    </div>
+    <a class="enquire" href="#contact">Enquire</a>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="kicker">Catalogue 2026–2027</p>
+      <h1>Kitchen, seen through.</h1>
+      <p>Airtight PET jars and unbreakable bottles from Bossberry Industries, Vasai East. Food-grade, leak-proof, made to stack.</p>
+    </div>
+  </header>
+
+  <div class="rail" aria-label="Collection">
+    <a href="#olivia">Olivia PET jar</a>
+    <a href="#bottles">Fridge bottle</a>
+    <a href="#bottles">The Cube</a>
+    <a href="#bottles">Hydra</a>
+    <a href="#bottles">Fusion</a>
+    <a href="#house">Dispenser 5L</a>
+  </div>
+
+  <section class="split" id="olivia">
+    <figure>
+      <img src="olivia.jpg" alt="Olivia airtight PET jars filled with pasta and cereal" />
+    </figure>
+    <article>
+      <p class="eyebrow">Airtight · stackable · see-through</p>
+      <h2>Olivia</h2>
+      <p class="sizes" style="margin-top:0.6rem">Airtight PET jar for kitchen storage. BPA free.</p>
+      <ul>
+        <li>Durable, shatterproof body</li>
+        <li>Wide mouth for easy access</li>
+        <li>Odourless · high-gloss transparency</li>
+        <li>100% leak proof · see-through lid</li>
+      </ul>
+      <p class="sizes">Sizes: 150 · 250 · 500 · 750 · 1000 · 1500 · 2000 · 2500 · 3500 · 4500 ml</p>
+    </article>
+  </section>
+
+  <section class="bottles" id="bottles">
+    <header>
+      <p class="eyebrow" style="color:#e2b441">Unbreakable plastic</p>
+      <h2>Bottles that live in the fridge door.</h2>
+    </header>
+    <div class="scroller">
+      <figure class="card">
+        <img src="fridge.jpg" alt="Crystal clear fridge bottles" />
+        <figcaption><strong>Fridge bottle</strong><span>Crystal clear · spill proof · 350 / 700 / 1000 ml</span></figcaption>
+      </figure>
+      <figure class="card">
+        <img src="aqua.jpg" alt="Aqua water bottles" />
+        <figcaption><strong>Aqua</strong><span>Unbreakable plasto water bottle</span></figcaption>
+      </figure>
+      <figure class="card">
+        <img src="cube.jpg" alt="The Cube compact bottle" />
+        <figcaption><strong>The Cube</strong><span>Light, compact, bag-ready · new-style cap</span></figcaption>
+      </figure>
+      <figure class="card">
+        <img src="hydra.jpg" alt="Hydra motivational water bottle" />
+        <figcaption><strong>Hydra</strong><span>Motivational messages on the body</span></figcaption>
+      </figure>
+      <figure class="card">
+        <img src="fusion.jpg" alt="Fusion sport bottle" />
+        <figcaption><strong>Fusion / Sport</strong><span>Click to lock · ~600–700 ml · food grade</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="house" id="house">
+    <article>
+      <p class="eyebrow">House</p>
+      <h2>From the jar line to a 5-litre stand.</h2>
+      <p>The 2026–27 book also carries Icon jars (PET or steel cap), Hi-Tea multipurpose sets, and a 5000 ml water dispenser with stand — same shatterproof, odourless, leak-proof brief as Olivia.</p>
+      <p>Every line in this mock is taken from the printed catalogue. No invented awards, no fake reviews.</p>
+    </article>
+    <figure>
+      <img src="dispenser.jpg" alt="Bossberry 5000 ml water dispenser with stand" />
+    </figure>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <p class="kicker">Bossberry Industries</p>
+      <h2>Vasai East.</h2>
+      <address>
+        Rajshree Industrial Estate, Agrawal Udyog Nagar,<br />
+        Sativali Road, Vasai East.<br /><br />
+        Customer care: <a href="tel:+919819353505">+91 98193 53505</a><br />
+        Email: <a href="mailto:bossberryind@gmail.com">bossberryind@gmail.com</a>
+      </address>
+    </div>
+  </section>
+
+  <footer>
+    Brand mock built from the Bossberry catalogue 2026–2027. Not an official company site until they adopt it.
+  </footer>
+</body>
+</html>
