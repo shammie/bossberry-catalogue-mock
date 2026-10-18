@@ -3,309 +3,275 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bossberry — Catalogue 2026–27</title>
-  <meta name="description" content="Bossberry Industries, Vasai. Airtight PET jars and unbreakable bottles. Catalogue 2026–2027." />
+  <title>Bossberry — See through. Stay airtight.</title>
+  <meta name="description" content="Bossberry 2026–27. Airtight PET jars and unbreakable bottles from Vasai East. Olivia, Zest, The Cube, Hydra O2." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,400;1,9..144,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --crimson: #9b1024;
-      --red: #c1122a;
-      --deep: #1c0609;
-      --ink: #1a1210;
-      --muted: #6b5a52;
-      --paper: #f6efe4;
-      --white: #fffcf7;
-      --gold: #e2b441;
-      --yellow: #f0c93a;
-      --leaf: #3d7a2e;
+      --crimson: #9a1026; --red: #c41632; --deep: #140407; --ink: #1b1210;
+      --muted: #6e5c54; --paper: #f7f0e4; --white: #fffaf3; --gold: #d4a017; --yellow: #f3c43a;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-    body {
-      font-family: Outfit, sans-serif;
-      color: var(--ink);
-      background: var(--paper);
-      text-wrap: pretty;
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
     }
+    body { font-family: Outfit, sans-serif; background: var(--paper); color: var(--ink); text-wrap: pretty; }
     a { color: inherit; }
     img { max-width: 100%; display: block; }
-
+    #boot {
+      position: fixed; inset: 0; z-index: 80; background: var(--deep); color: #fff;
+      display: grid; place-items: center; animation: bootOut .7s 1.35s ease forwards; pointer-events: none;
+    }
+    #boot strong { font-family: Fraunces, serif; font-weight: 400; font-size: 2.4rem; letter-spacing: -.03em; }
+    #boot i { color: var(--red); font-style: normal; }
+    @keyframes bootOut { to { opacity: 0; visibility: hidden; } }
     nav {
-      position: sticky; top: 0; z-index: 20;
+      position: fixed; inset: 0 0 auto; z-index: 40;
       display: flex; align-items: center; justify-content: space-between;
-      padding: 0.85rem 6vw;
-      background: color-mix(in srgb, var(--deep) 88%, transparent);
-      backdrop-filter: blur(12px);
-      color: var(--white);
+      padding: .85rem 5vw; color: #fff; mix-blend-mode: difference;
     }
-    .wordmark {
-      font-weight: 500; letter-spacing: -0.03em; font-size: 1.15rem;
+    nav.solid { mix-blend-mode: normal; background: color-mix(in srgb, var(--deep) 92%, transparent); backdrop-filter: blur(14px); }
+    .wm { font-weight: 600; letter-spacing: -.04em; font-size: 1.12rem; }
+    .wm i { color: var(--gold); font-style: normal; }
+    .nav-r { display: flex; gap: 1.4rem; align-items: center; font-size: .8rem; font-weight: 500; }
+    .nav-r a { text-decoration: none; opacity: .85; }
+    .pill {
+      mix-blend-mode: normal; background: var(--yellow); color: var(--deep);
+      text-decoration: none !important; opacity: 1 !important;
+      padding: .5rem .9rem; border-radius: 999px; font-weight: 600;
     }
-    .wordmark span { color: var(--gold); }
-    .nav-links { display: flex; gap: 1.5rem; font-size: 0.82rem; font-weight: 500; }
-    .nav-links a { text-decoration: none; opacity: 0.82; }
-    .nav-links a:hover { opacity: 1; }
-    .enquire {
-      background: var(--white); color: var(--crimson);
-      text-decoration: none; font-size: 0.78rem; font-weight: 600;
-      padding: 0.55rem 0.9rem; border-radius: 999px;
-    }
-
     .hero {
-      min-height: 100svh;
-      background: var(--deep) url("cover.jpg") center/cover no-repeat;
-      color: var(--white);
-      display: grid;
-      align-content: end;
-      padding: 8vh 6vw 7vh;
-      position: relative;
+      min-height: 100svh; color: #fff; position: relative; overflow: hidden;
+      display: grid; align-content: end; padding: 0 6vw 12vh;
     }
-    .hero::after {
-      content: "";
-      position: absolute; inset: 0;
-      background: linear-gradient(180deg, transparent 40%, rgba(20,4,6,.72) 100%);
-      pointer-events: none;
+    .hero-bg {
+      position: absolute; inset: -8%;
+      background: var(--deep) url("img/hero-cover.jpg") center/cover no-repeat;
+      animation: ken 22s ease-in-out infinite alternate; transform: scale(1.08);
     }
-    .hero-inner { position: relative; z-index: 1; max-width: 38rem; }
-    .kicker {
-      font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase;
-      opacity: 0.8; margin-bottom: 0.8rem;
-    }
-    h1 {
-      font-family: Fraunces, serif;
-      font-weight: 400;
-      font-size: clamp(2.8rem, 8vw, 5.4rem);
-      line-height: 0.92;
-      letter-spacing: -0.03em;
-    }
-    .hero p {
-      margin-top: 1.2rem; max-width: 28rem;
-      font-weight: 300; font-size: 1.05rem; line-height: 1.5; opacity: 0.92;
-    }
-
-    .rail {
-      display: flex; gap: 0.7rem; overflow-x: auto;
-      padding: 1.1rem 6vw;
-      background: var(--deep); color: var(--white);
-      scrollbar-width: none;
-    }
-    .rail::-webkit-scrollbar { display: none; }
-    .rail a {
-      flex: 0 0 auto; text-decoration: none;
-      border: 1px solid color-mix(in srgb, white 22%, transparent);
-      padding: 0.45rem 0.85rem; border-radius: 999px;
-      font-size: 0.78rem; white-space: nowrap;
-    }
-    .rail a:hover { background: var(--white); color: var(--deep); }
-
-    .split {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      min-height: 88vh;
-    }
-    .split figure {
-      margin: 0; background: var(--yellow);
-      display: grid; place-items: center; overflow: hidden;
-    }
-    .split figure img {
-      width: 100%; height: 100%; object-fit: cover; object-position: center 18%;
-    }
-    .split article {
-      padding: 8vh 6vw;
-      display: flex; flex-direction: column; justify-content: center;
-      background: var(--white);
-    }
-    .split h2 {
-      font-family: Fraunces, serif;
-      font-size: clamp(3rem, 7vw, 5.5rem);
-      font-weight: 400; font-style: italic;
-      color: #8a4a18; line-height: 0.9;
-    }
-    .eyebrow {
-      font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
-      color: var(--muted); margin-bottom: 0.6rem; font-weight: 600;
-    }
-    .split ul { margin: 1.4rem 0 0; list-style: none; }
-    .split li {
-      padding: 0.55rem 0;
-      border-bottom: 1px solid #eadfd0;
-      font-size: 0.95rem;
-    }
-    .sizes { margin-top: 1.4rem; color: var(--muted); font-size: 0.88rem; line-height: 1.55; }
-
-    .bottles {
-      padding: 8vh 0 6vh;
-      background: var(--deep); color: var(--white);
-    }
-    .bottles header { padding: 0 6vw 2.5rem; max-width: 36rem; }
-    .bottles h2 {
-      font-family: Fraunces, serif; font-weight: 400;
-      font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.05;
-    }
-    .scroller {
-      display: flex; gap: 1rem; overflow-x: auto;
-      padding: 0 6vw 1rem; scroll-snap-type: x mandatory;
-      scrollbar-width: thin;
-    }
-    .card {
-      flex: 0 0 min(72vw, 320px);
-      scroll-snap-align: start;
-      background: #2a0b10;
-    }
-    .card img { aspect-ratio: 3/4; width: 100%; object-fit: cover; object-position: center 20%; }
-    .card figcaption { padding: 0.9rem 1rem 1.1rem; }
-    .card strong { display: block; font-size: 1.05rem; }
-    .card span { font-size: 0.78rem; opacity: 0.7; }
-
-    .house {
-      display: grid; grid-template-columns: 0.9fr 1.1fr; min-height: 70vh;
-    }
-    .house article { padding: 8vh 6vw; background: var(--paper); display: flex; flex-direction: column; justify-content: center; }
-    .house h2 {
-      font-family: Fraunces, serif; font-weight: 400;
-      font-size: clamp(2rem, 4.5vw, 3.2rem); line-height: 1.08;
-    }
-    .house p { margin-top: 1rem; color: var(--muted); max-width: 34rem; line-height: 1.6; }
-    .house figure img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
-
-    .contact {
-      background: var(--crimson) url("contact.jpg") center/cover no-repeat;
-      color: var(--white); min-height: 72vh;
-      display: grid; align-content: end;
-      padding: 10vh 6vw 7vh; position: relative;
-    }
-    .contact::before {
+    @keyframes ken { to { transform: scale(1.16) translate3d(-2%,-1%,0); } }
+    .hero-bg::after {
       content: ""; position: absolute; inset: 0;
-      background: linear-gradient(180deg, rgba(28,6,9,.15), rgba(28,6,9,.78));
+      background: linear-gradient(180deg, rgba(10,2,3,.15) 20%, rgba(10,2,3,.78));
     }
-    .contact-inner { position: relative; z-index: 1; max-width: 40rem; }
-    .contact h2 {
-      font-family: Fraunces, serif; font-weight: 400;
-      font-size: clamp(2rem, 5vw, 3.2rem);
+    .hero-inner { position: relative; z-index: 1; max-width: 42rem; }
+    .kicker { font-size: .7rem; letter-spacing: .32em; text-transform: uppercase; opacity: .78; margin-bottom: 1rem; }
+    h1 { font-family: Fraunces, serif; font-weight: 300; font-size: clamp(3.2rem, 9vw, 6.4rem); line-height: .9; letter-spacing: -.04em; }
+    .hero p { margin-top: 1.25rem; font-weight: 300; font-size: 1.12rem; line-height: 1.55; max-width: 28rem; }
+    .hero-cta { display: flex; gap: .7rem; margin-top: 1.8rem; flex-wrap: wrap; }
+    .btn { display: inline-flex; text-decoration: none; border-radius: 999px; padding: .85rem 1.2rem; font-weight: 600; font-size: .88rem; transition: transform .25s ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-y { background: var(--yellow); color: var(--deep); }
+    .btn-g { color: #fff; border: 1px solid rgba(255,255,255,.4); }
+    .ticker { background: var(--yellow); color: var(--deep); overflow: hidden; }
+    .ticker-track {
+      display: flex; gap: 2.4rem; width: max-content; padding: .85rem 0;
+      font-weight: 600; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase;
+      animation: marquee 28s linear infinite;
     }
-    .contact address {
-      font-style: normal; margin-top: 1.2rem; line-height: 1.7; font-weight: 300;
+    @keyframes marquee { to { transform: translateX(-50%); } }
+    .chapter { display: grid; grid-template-columns: 1.08fr .92fr; min-height: 100svh; }
+    .chapter.reverse { grid-template-columns: .92fr 1.08fr; }
+    .chapter.reverse .copy { order: -1; }
+    .visual { position: relative; overflow: hidden; background: #1a0a0c; }
+    .visual img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.05); transition: transform 1.4s ease; }
+    .chapter:hover .visual img { transform: scale(1.11); }
+    .copy { padding: clamp(2.5rem, 7vh, 6rem) 6vw; display: flex; flex-direction: column; justify-content: center; background: var(--white); }
+    .copy.gold { background: var(--yellow); }
+    .copy.deep { background: var(--deep); color: #fff; }
+    .eyebrow { font-size: .7rem; letter-spacing: .24em; text-transform: uppercase; font-weight: 600; color: var(--muted); margin-bottom: .5rem; }
+    .copy.deep .eyebrow, .copy.gold .eyebrow { color: inherit; opacity: .7; }
+    .copy h2 { font-family: Fraunces, serif; font-weight: 400; font-style: italic; font-size: clamp(3.2rem, 8vw, 6rem); line-height: .86; color: #8a4312; }
+    .copy.deep h2 { color: var(--yellow); font-style: normal; font-weight: 300; }
+    .sub { margin-top: .45rem; font-weight: 600; letter-spacing: .16em; font-size: .78rem; text-transform: uppercase; }
+    .lede { margin-top: 1.1rem; color: var(--muted); line-height: 1.6; max-width: 34rem; }
+    .copy.deep .lede { color: #e8d4c8; }
+    .copy ul { list-style: none; margin-top: 1.3rem; }
+    .copy li { padding: .55rem 0; border-bottom: 1px solid #ead9c6; font-size: .98rem; }
+    .copy.deep li { border-color: rgba(255,255,255,.12); }
+    .sizes { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1.4rem; }
+    .sizes b { font-weight: 600; font-size: .75rem; border: 1px solid currentColor; border-radius: 999px; padding: .28rem .55rem; opacity: .85; }
+    .circle-wrap { background: var(--yellow); display: grid; place-items: center; padding: 6vh 4vw; }
+    .circle-wrap img {
+      width: min(78%, 520px); aspect-ratio: 1; object-fit: cover; border-radius: 50%;
+      box-shadow: 0 30px 80px rgba(80,20,10,.18); animation: float 6s ease-in-out infinite;
     }
-    .contact a { color: var(--gold); }
-
-    footer {
-      padding: 1.2rem 6vw; font-size: 0.72rem; color: var(--muted);
-      background: var(--deep); color: #cbb;
+    @keyframes float { 50% { transform: translateY(-10px); } }
+    .range { padding: 8vh 0 4vh; background: var(--deep); color: #fff; }
+    .range header { padding: 0 6vw 2rem; max-width: 38rem; }
+    .range h2 { font-family: Fraunces, serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; }
+    .strip { display: flex; gap: 1rem; overflow-x: auto; padding: 0 6vw 2rem; scroll-snap-type: x mandatory; }
+    .tile { flex: 0 0 min(78vw, 340px); scroll-snap-align: start; background: #24080c; text-decoration: none; color: inherit; overflow: hidden; }
+    .tile img { aspect-ratio: 4/5; width: 100%; object-fit: cover; transition: transform .8s ease; }
+    .tile:hover img { transform: scale(1.07); }
+    .tile figcaption { padding: 1rem 1.05rem 1.2rem; }
+    .tile strong { display: block; font-family: Fraunces, serif; font-size: 1.45rem; font-weight: 400; }
+    .tile span { font-size: .8rem; opacity: .7; }
+    .ask {
+      min-height: 85svh; color: #fff;
+      background: var(--crimson) url("img/dispenser-hero.jpg") center/cover no-repeat;
+      position: relative; display: grid; align-content: end; padding: 10vh 6vw 8vh;
     }
-
-    @media (max-width: 860px) {
-      .nav-links { display: none; }
-      .split, .house { grid-template-columns: 1fr; }
-      .split figure, .house figure { min-height: 52vh; }
+    .ask::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,4,7,.2), rgba(20,4,7,.82)); }
+    .ask-inner { position: relative; z-index: 1; max-width: 40rem; }
+    .ask h2 { font-family: Fraunces, serif; font-weight: 300; font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1; }
+    address { font-style: normal; margin-top: 1.2rem; line-height: 1.7; font-weight: 300; }
+    address a { color: var(--yellow); }
+    .dock {
+      position: fixed; bottom: 1rem; left: 50%; transform: translateX(-50%); z-index: 50;
+      display: flex; gap: .45rem; background: var(--deep); padding: .4rem; border-radius: 999px;
+      box-shadow: 0 12px 40px rgba(0,0,0,.35);
+    }
+    .dock a { text-decoration: none; color: #fff; font-size: .78rem; font-weight: 600; padding: .65rem 1rem; border-radius: 999px; }
+    .dock .wa { background: #25D366; color: #062; }
+    footer { padding: 1.2rem 6vw; background: var(--deep); color: #b9a29a; font-size: .72rem; }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (max-width: 880px) {
+      .nav-r a:not(.pill) { display: none; }
+      .chapter, .chapter.reverse { grid-template-columns: 1fr; min-height: auto; }
+      .chapter.reverse .copy { order: 0; }
+      .visual { min-height: 58vh; }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <div class="wordmark">Boss<span>berry</span>™</div>
-    <div class="nav-links">
+  <div id="boot"><strong>Boss<i>berry</i>™</strong></div>
+  <nav id="nav">
+    <div class="wm">Boss<i>berry</i>™</div>
+    <div class="nav-r">
       <a href="#olivia">Olivia</a>
-      <a href="#bottles">Bottles</a>
-      <a href="#house">House</a>
-      <a href="#contact">Vasai</a>
+      <a href="#zest">Zest</a>
+      <a href="#cube">Cube</a>
+      <a href="#hydra">Hydra</a>
+      <a class="pill" href="https://wa.me/919819353505?text=Hi%20Bossberry%2C%20I%20want%20the%202026-27%20catalogue%20and%20price%20list." target="_blank" rel="noopener">WhatsApp</a>
     </div>
-    <a class="enquire" href="#contact">Enquire</a>
   </nav>
-
   <header class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
     <div class="hero-inner">
-      <p class="kicker">Catalogue 2026–2027</p>
-      <h1>Kitchen, seen through.</h1>
-      <p>Airtight PET jars and unbreakable bottles from Bossberry Industries, Vasai East. Food-grade, leak-proof, made to stack.</p>
+      <p class="kicker">Catalogue 2026 — 2027</p>
+      <h1>See through.<br>Stay airtight.</h1>
+      <p>PET jars that stack. Bottles that live in the fridge door. Food-grade, BPA free, made in Vasai East.</p>
+      <div class="hero-cta">
+        <a class="btn btn-y" href="#olivia">See the line</a>
+        <a class="btn btn-g" href="#ask">Talk to the factory</a>
+      </div>
     </div>
   </header>
-
-  <div class="rail" aria-label="Collection">
-    <a href="#olivia">Olivia PET jar</a>
-    <a href="#bottles">Fridge bottle</a>
-    <a href="#bottles">The Cube</a>
-    <a href="#bottles">Hydra</a>
-    <a href="#bottles">Fusion</a>
-    <a href="#house">Dispenser 5L</a>
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>BPA Free</span><span>Food grade</span><span>Leak proof</span><span>Shatterproof</span><span>Freezer safe</span><span>Unbreakable bottles</span><span>Odourless</span><span>High-gloss PET</span>
+      <span>BPA Free</span><span>Food grade</span><span>Leak proof</span><span>Shatterproof</span><span>Freezer safe</span><span>Unbreakable bottles</span><span>Odourless</span><span>High-gloss PET</span>
+    </div>
   </div>
-
-  <section class="split" id="olivia">
-    <figure>
-      <img src="olivia.jpg" alt="Olivia airtight PET jars filled with pasta and cereal" />
-    </figure>
-    <article>
-      <p class="eyebrow">Airtight · stackable · see-through</p>
+  <section class="chapter" id="olivia">
+    <div class="circle-wrap visual">
+      <img src="img/olivia-hero.jpg" alt="Olivia airtight PET jars filled with pasta and cereal" />
+    </div>
+    <article class="copy gold">
+      <p class="eyebrow">Flagship jar</p>
       <h2>Olivia</h2>
-      <p class="sizes" style="margin-top:0.6rem">Airtight PET jar for kitchen storage. BPA free.</p>
+      <p class="sub">Airtight PET jar</p>
+      <p class="lede">Airtight, stackable, see-through kitchen storage. Ten sizes from a spice jar to a 4.5 litre canister — one silhouette for the whole counter.</p>
       <ul>
         <li>Durable, shatterproof body</li>
         <li>Wide mouth for easy access</li>
         <li>Odourless · high-gloss transparency</li>
         <li>100% leak proof · see-through lid</li>
       </ul>
-      <p class="sizes">Sizes: 150 · 250 · 500 · 750 · 1000 · 1500 · 2000 · 2500 · 3500 · 4500 ml</p>
+      <div class="sizes">
+        <b>150ml</b><b>250ml</b><b>500ml</b><b>750ml</b><b>1000ml</b><b>1500ml</b><b>2000ml</b><b>2500ml</b><b>3500ml</b><b>4500ml</b>
+      </div>
     </article>
   </section>
-
-  <section class="bottles" id="bottles">
+  <section class="chapter reverse" id="zest">
+    <div class="visual"><img src="img/zest-infused.jpg" alt="Zest fridge bottle with fruit-infused water" /></div>
+    <article class="copy">
+      <p class="eyebrow">Fridge bottle</p>
+      <h2>Zest</h2>
+      <p class="sub">Crystal clear · spill proof · easy to pour</p>
+      <p class="lede">Unbreakable plastic water bottle for everyday home and office. Infuse it, freeze it, take it in the bag. Caps in rose, black, cream and steel blue.</p>
+      <ul>
+        <li>Food grade · freezer safe · BPA free</li>
+        <li>Spill proof · unbreakable · light weight</li>
+        <li>Compact — fits in a bag</li>
+      </ul>
+      <div class="sizes"><b>350ml</b><b>700ml</b><b>1000ml</b></div>
+    </article>
+  </section>
+  <section class="chapter" id="cube">
+    <div class="visual"><img src="img/cube-hero.jpg" alt="The Cube square bottles in grey, white, copper and blue" /></div>
+    <article class="copy deep">
+      <p class="eyebrow">Carry</p>
+      <h2>The Cube</h2>
+      <p class="sub">Light. Compact. New-style cap.</p>
+      <p class="lede">Square body that sits in a bag without rolling. High-quality plastic, loop cap, four colours. Built for gym, office, and the school run.</p>
+      <ul>
+        <li>Food grade · freezer safe · BPA free · spill proof</li>
+        <li>Unbreakable · light weight · compact</li>
+      </ul>
+      <div class="sizes"><b>700ml</b><b>1000ml</b></div>
+    </article>
+  </section>
+  <section class="chapter reverse" id="hydra">
+    <div class="visual"><img src="img/hydra-hero.jpg" alt="Hydra O2 motivational water bottles in gradient colours" /></div>
+    <article class="copy">
+      <p class="eyebrow">1 litre</p>
+      <h2>Hydra O₂</h2>
+      <p class="sub">Motivational messages</p>
+      <p class="lede">Time marks printed on the bottle — 8am decide to go, 10am drink simply, 12pm keep drinking. Gradient bodies in pink, blue, purple, yellow, green.</p>
+      <div class="sizes"><b>1000ml</b></div>
+    </article>
+  </section>
+  <section class="range" id="line">
     <header>
-      <p class="eyebrow" style="color:#e2b441">Unbreakable plastic</p>
-      <h2>Bottles that live in the fridge door.</h2>
+      <p class="eyebrow" style="color:var(--gold)">Also in the 2026–27 book</p>
+      <h2>Icon jars, Fusion sport, Aqua, and a 5-litre stand.</h2>
     </header>
-    <div class="scroller">
-      <figure class="card">
-        <img src="fridge.jpg" alt="Crystal clear fridge bottles" />
-        <figcaption><strong>Fridge bottle</strong><span>Crystal clear · spill proof · 350 / 700 / 1000 ml</span></figcaption>
-      </figure>
-      <figure class="card">
-        <img src="aqua.jpg" alt="Aqua water bottles" />
-        <figcaption><strong>Aqua</strong><span>Unbreakable plasto water bottle</span></figcaption>
-      </figure>
-      <figure class="card">
-        <img src="cube.jpg" alt="The Cube compact bottle" />
-        <figcaption><strong>The Cube</strong><span>Light, compact, bag-ready · new-style cap</span></figcaption>
-      </figure>
-      <figure class="card">
-        <img src="hydra.jpg" alt="Hydra motivational water bottle" />
-        <figcaption><strong>Hydra</strong><span>Motivational messages on the body</span></figcaption>
-      </figure>
-      <figure class="card">
-        <img src="fusion.jpg" alt="Fusion sport bottle" />
-        <figcaption><strong>Fusion / Sport</strong><span>Click to lock · ~600–700 ml · food grade</span></figcaption>
-      </figure>
+    <div class="strip">
+      <a class="tile" href="#ask"><img src="img/icon-hero.jpg" alt="Icon multipurpose canisters" /><figcaption><strong>Icon jars</strong><span>PET cap or steel cap · 300–2500ml</span></figcaption></a>
+      <a class="tile" href="#ask"><img src="img/fusion-hero.jpg" alt="Fusion sport bottle" /><figcaption><strong>Fusion</strong><span>Click to lock sport bottle · ~600ml</span></figcaption></a>
+      <a class="tile" href="#ask"><img src="img/aqua-hero.jpg" alt="Aqua water bottles" /><figcaption><strong>Aqua</strong><span>Unbreakable plasto water bottle</span></figcaption></a>
+      <a class="tile" href="#ask"><img src="img/dispenser-hero.jpg" alt="5000ml water dispenser with stand" /><figcaption><strong>Dispenser</strong><span>5000ml with stand · leak proof</span></figcaption></a>
     </div>
   </section>
-
-  <section class="house" id="house">
-    <article>
-      <p class="eyebrow">House</p>
-      <h2>From the jar line to a 5-litre stand.</h2>
-      <p>The 2026–27 book also carries Icon jars (PET or steel cap), Hi-Tea multipurpose sets, and a 5000 ml water dispenser with stand — same shatterproof, odourless, leak-proof brief as Olivia.</p>
-      <p>Every line in this mock is taken from the printed catalogue. No invented awards, no fake reviews.</p>
-    </article>
-    <figure>
-      <img src="dispenser.jpg" alt="Bossberry 5000 ml water dispenser with stand" />
-    </figure>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="contact-inner">
+  <section class="ask" id="ask">
+    <div class="ask-inner">
       <p class="kicker">Bossberry Industries</p>
-      <h2>Vasai East.</h2>
+      <h2>Price list. Cartons. Your city.</h2>
+      <p class="lede" style="color:#f0e0d6;margin-top:1rem">Dealers and kitchens — WhatsApp the factory. We send the 2026–27 range and packing from Vasai East.</p>
       <address>
-        Rajshree Industrial Estate, Agrawal Udyog Nagar,<br />
-        Sativali Road, Vasai East.<br /><br />
-        Customer care: <a href="tel:+919819353505">+91 98193 53505</a><br />
-        Email: <a href="mailto:bossberryind@gmail.com">bossberryind@gmail.com</a>
+        Rajshree Industrial Estate, Agrawal Udyog Nagar,<br>
+        Sativali Road, Vasai East.<br><br>
+        <a href="tel:+919819353505">+91 98193 53505</a><br>
+        <a href="mailto:bossberryind@gmail.com">bossberryind@gmail.com</a>
       </address>
+      <div class="hero-cta">
+        <a class="btn btn-y" href="https://wa.me/919819353505?text=Hi%20Bossberry%2C%20I%20want%20the%202026-27%20catalogue%20and%20price%20list." target="_blank" rel="noopener">Enquire on WhatsApp</a>
+        <a class="btn btn-g" href="tel:+919819353505">Call customer care</a>
+      </div>
     </div>
   </section>
-
-  <footer>
-    Brand mock built from the Bossberry catalogue 2026–2027. Not an official company site until they adopt it.
-  </footer>
+  <div class="dock">
+    <a href="tel:+919819353505">Call</a>
+    <a class="wa" href="https://wa.me/919819353505?text=Hi%20Bossberry%2C%20I%20want%20the%202026-27%20catalogue%20and%20price%20list." target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+  <footer>Photography cropped from the Bossberry catalogue 2026–2027. Sales mock — adopt when ready.</footer>
+  <script>
+    const nav = document.getElementById("nav");
+    addEventListener("scroll", () => nav.classList.toggle("solid", scrollY > 40), { passive: true });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add("in"); });
+    }, { threshold: 0.16 });
+    document.querySelectorAll(".copy, .visual, .range header").forEach((el) => {
+      el.classList.add("reveal");
+      io.observe(el);
+    });
+  </script>
 </body>
 </html>
